@@ -16,6 +16,7 @@ import { ValidatorPageResult } from './validators/Validators';
 import { Layout } from '~/components/Layout';
 import { IdPage } from '~/pages/id-page';
 import {Preference} from "~/pages/preference";
+import { CoinPlaceholder } from './coin/CoinPlaceholder';
 
 function RedirectWithId({ base }: { base: string }) {
 	const params = useParams();
@@ -40,6 +41,7 @@ export const router = sentryCreateBrowserRouter([
 			{ path: 'address/:id', element: <AddressResult /> },
 			{ path: 'validators', element: <ValidatorPageResult /> },
 			{ path: 'validator/:id', element: <ValidatorDetails /> },
+			{ path: 'coin/:id', element: <CoinPlaceholder /> },
 			{ path: 'experimental--id/:id', element: <IdPage /> },
 			{ path: 'redirect-preference', element: <Preference />}
 		],
